@@ -1,0 +1,53 @@
+<!-- res/layout/fragment_rate_it_dialog.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <!-- Add your rating stars here (you can use RatingBar or any other custom view) -->
+    <!-- For simplicity, using TextViews with star emojis -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How would you rate this App?"
+            android:textColor="#000"
+            android:textFontWeight="600"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_16ssp"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            />
+
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="0.0"
+        android:isIndicator="false"
+        android:layout_gravity="center"
+        android:progressTint="#F6BE00" />
+
+    <!-- Clickable 'Click here' Text -->
+    <TextView
+        android:id="@+id/already_rated"
+        android:fontFamily="@font/poppins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Tap the number of stars you would give us on a scale from 1-5."
+        android:textColor="#bfbfbf"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="5dp" />
+
+</LinearLayout>
